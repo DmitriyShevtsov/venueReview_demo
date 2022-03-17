@@ -1,0 +1,34 @@
+<center><h1>Кто-то недавно написал вот это:</h1>
+  <h3><%= @post.title %></h3>
+    <p><%= @post.body %></p>
+  </center>
+<hr>
+<%= link_to "Поменять шота", edit_post_path(@post), :class => 'btn btn-warning' %>
+<%= button_to "Удолить эту гнусную депешу!", post_path(@post), method: :delete,  data: {confirm: "Удолить?"}, :class => 'btn btn-danger' %>
+<hr>
+<h2>
+  А тут у нас мнения пасутся! Такие дела...
+</h2>
+
+
+  <% @post.comments.each do |comment| %>
+  <div class="alert alert-light">
+<p><strong><%= comment.username %></strong>: <%= comment.body %></p>
+  </div>
+  <% end %>
+<hr>
+<h3>Ща напишу как было</h3>
+
+  <%= form_for ([@post, @post.comments.build]) do |f| %>
+
+<p>
+  Кто я<br>
+  <%= f.text_field(:username, {:class => 'form-control'}) %>
+</p>
+<p>
+  Было так<br>
+  <%= f.text_area(:body, {:class => 'form-control'}) %>
+</p>
+<p> <%= f.submit("От теперь правда!", {:class => 'btn btn-warning'}) %> </p>
+<% end %>
+</center>
