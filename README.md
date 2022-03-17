@@ -1,24 +1,13 @@
 # README
+Hey, this is a basic, very-very basic review portal. It allows following options:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1. create venue profile;
+2. add a review of the venue with its name and review text;
+3. add comments;
+4. view/modify/remove the review;
+5. Authenticate for comment posting and review removal.
 
-Things you may want to cover:
+Nothing complex, very simple
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ruby 3.0.0p0 (2020-12-25 revision 95aff21468) [x86_64-darwin20]
+Rails 7.0.2.3
