@@ -4,7 +4,7 @@
   </center>
 <hr>
 <%= link_to "Поменять шота", edit_post_path(@post), :class => 'btn btn-warning' %>
-<%= button_to "Удолить эту гнусную депешу!", post_path(@post), method: :delete,  data: {confirm: "Удолить?"}, :class => 'btn btn-danger' %>
+<%= link_to "Удолить эту гнусную депешу!", post_path(@post), method: :delete,  data: {confirm: "Удолить?"}, :class => 'btn btn-danger' %>
 <hr>
 <h2>
   А тут у нас мнения пасутся! Такие дела...

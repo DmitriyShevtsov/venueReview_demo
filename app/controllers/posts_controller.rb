@@ -1,6 +1,5 @@
 class PostsController < ApplicationController
-#http_basic_authenticate_with name: "admin", password: "12Ax76l6el34"
-#  except [:index, :show]
+
 
   def index
     @heading = "ГЛАГНЕ"
